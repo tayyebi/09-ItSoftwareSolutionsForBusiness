@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TvtoAutomation" Class="DcDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=TvtoAutomation;Integrated Security=True;Persist Security Info=False" SettingsObjectName="TvtoAutomation.Properties.Settings" SettingsPropertyName="TvtoAutomationConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.v_Signs" Member="v_Signs">
+    <Type Name="v_Sign">
+      <Column Name="SignId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentVersion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentTitle" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentGroupName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentGroupSignId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PositionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PositionName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.v_UserPosition" Member="v_UserPositions">
+    <Type Name="v_UserPosition">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PositionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.DocumentDeleteCommand" Method="DocumentDeleteCommand">
+    <Parameter Name="Original_Id" Parameter="original_Id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DocumentGroupDeleteCommand" Method="DocumentGroupDeleteCommand">
+    <Parameter Name="Original_Id" Parameter="original_Id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DocumentGroupInsertCommand" Method="DocumentGroupInsertCommand">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="DocumentGroupInsertCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DocumentGroupSelectCommand" Method="DocumentGroupSelectCommand">
+    <ElementType Name="DocumentGroupSelectCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DocumentGroupSignDeleteCommand" Method="DocumentGroupSignDeleteCommand">
+    <Parameter Name="Original_DocumentGroupId" Parameter="original_DocumentGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Original_PositionId" Parameter="original_PositionId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DocumentGroupSignInsertCommand" Method="DocumentGroupSignInsertCommand">
+    <Parameter Name="DocumentGroupId" Parameter="documentGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PositionId" Parameter="positionId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="DocumentGroupSignInsertCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PositionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DocumentGroupSignSelectCommand" Method="DocumentGroupSignSelectCommand">
+    <ElementType Name="DocumentGroupSignSelectCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PositionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DocumentGroupSignUpdateCommand" Method="DocumentGroupSignUpdateCommand">
+    <Parameter Name="DocumentGroupId" Parameter="documentGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PositionId" Parameter="positionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Original_Id" Parameter="original_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Original_DocumentGroupId" Parameter="original_DocumentGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Original_PositionId" Parameter="original_PositionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="DocumentGroupSignUpdateCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PositionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DocumentGroupUpdateCommand" Method="DocumentGroupUpdateCommand">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Original_Id" Parameter="original_Id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="DocumentGroupUpdateCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DocumentInsertCommand" Method="DocumentInsertCommand">
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Create" Parameter="create" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="OwnerUsername" Parameter="ownerUsername" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DocumentGroupId" Parameter="documentGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IsDeleted" Parameter="isDeleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="DocumentInsertCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Create]" Member="Create" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="OwnerUsername" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DocumentSelectCommand" Method="DocumentSelectCommand">
+    <ElementType Name="DocumentSelectCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Create]" Member="Create" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="OwnerUsername" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DocumentUpdateCommand" Method="DocumentUpdateCommand">
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Create" Parameter="create" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="OwnerUsername" Parameter="ownerUsername" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DocumentGroupId" Parameter="documentGroupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IsDeleted" Parameter="isDeleted" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Original_Id" Parameter="original_Id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="DocumentUpdateCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Create]" Member="Create" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="OwnerUsername" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DocumentVersionDeleteCommand" Method="DocumentVersionDeleteCommand">
+    <Parameter Name="Original_Id" Parameter="original_Id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DocumentVersionInsertCommand" Method="DocumentVersionInsertCommand">
+    <Parameter Name="DocumentId" Parameter="documentId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Submit" Parameter="submit" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Body" Parameter="body" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="IsDeleted" Parameter="isDeleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="DocumentVersionInsertCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Submit" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Body" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DocumentVersionSelectCommand" Method="DocumentVersionSelectCommand">
+    <ElementType Name="DocumentVersionSelectCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Submit" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Body" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DocumentVersionSignDeleteCommand" Method="DocumentVersionSignDeleteCommand">
+    <Parameter Name="Original_Id" Parameter="original_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Original_DocumentVersionId" Parameter="original_DocumentVersionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Original_DocumentGroupSignId" Parameter="original_DocumentGroupSignId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Original_Username" Parameter="original_Username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Original_Status" Parameter="original_Status" Type="System.String" DbType="NChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DocumentVersionSignInsertCommand" Method="DocumentVersionSignInsertCommand">
+    <Parameter Name="DocumentVersionId" Parameter="documentVersionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DocumentGroupSignId" Parameter="documentGroupSignId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Status" Parameter="status" Type="System.String" DbType="NChar(10)" />
+    <ElementType Name="DocumentVersionSignInsertCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentVersionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentGroupSignId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DocumentVersionSignSelectCommand" Method="DocumentVersionSignSelectCommand">
+    <ElementType Name="DocumentVersionSignSelectCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentVersionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentGroupSignId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DocumentVersionSignUpdateCommand" Method="DocumentVersionSignUpdateCommand">
+    <Parameter Name="Status" Parameter="status" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="Original_Id" Parameter="original_Id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="DocumentVersionSignUpdateCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentVersionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentGroupSignId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DocumentVersionUpdateCommand" Method="DocumentVersionUpdateCommand">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DocumentId" Parameter="documentId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Submit" Parameter="submit" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Body" Parameter="body" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="IsDeleted" Parameter="isDeleted" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Original_Id" Parameter="original_Id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="DocumentVersionUpdateCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Submit" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Body" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PositionDeleteCommand" Method="PositionDeleteCommand">
+    <Parameter Name="Original_Id" Parameter="original_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Original_Name" Parameter="original_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.PositionInsertCommand" Method="PositionInsertCommand">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="PositionInsertCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PositionSelectCommand" Method="PositionSelectCommand">
+    <ElementType Name="PositionSelectCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PositionUpdateCommand" Method="PositionUpdateCommand">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Original_Id" Parameter="original_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Original_Name" Parameter="original_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="PositionUpdateCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RexaLogin" Method="RexaLogin">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(300)" />
+    <ElementType Name="RexaLoginResult">
+      <Column Name="Stauts" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UserDeleteCommand" Method="UserDeleteCommand">
+    <Parameter Name="Original_Username" Parameter="original_Username" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UserInsertCommand" Method="UserInsertCommand">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="ProfilePicture" Parameter="profilePicture" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" />
+    <Parameter Name="Firstname" Parameter="firstname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Lastname" Parameter="lastname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="IsDeleted" Parameter="isDeleted" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="IsAdmin" Parameter="isAdmin" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="UserInsertCommandResult">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="ProfilePicture" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" />
+      <Column Name="Firstname" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Lastname" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsAdmin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UserPositionDeleteCommand" Method="UserPositionDeleteCommand">
+    <Parameter Name="Original_Username" Parameter="original_Username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Original_PositionId" Parameter="original_PositionId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UserPositionInsertCommand" Method="UserPositionInsertCommand">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PositionId" Parameter="positionId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="UserPositionInsertCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PositionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UserPositionSelectCommand" Method="UserPositionSelectCommand">
+    <ElementType Name="UserPositionSelectCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PositionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UserPositionUpdateCommand" Method="UserPositionUpdateCommand">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PositionId" Parameter="positionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Original_Id" Parameter="original_Id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="UserPositionUpdateCommandResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PositionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UserSelectCommand" Method="UserSelectCommand">
+    <ElementType Name="UserSelectCommandResult">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="ProfilePicture" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" />
+      <Column Name="Firstname" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Lastname" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsAdmin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UserUpdateCommand" Method="UserUpdateCommand">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="ProfilePicture" Parameter="profilePicture" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" />
+    <Parameter Name="Firstname" Parameter="firstname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Lastname" Parameter="lastname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="IsDeleted" Parameter="isDeleted" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="IsAdmin" Parameter="isAdmin" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Original_Username" Parameter="original_Username" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="UserUpdateCommandResult">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="ProfilePicture" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" />
+      <Column Name="Firstname" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Lastname" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsAdmin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

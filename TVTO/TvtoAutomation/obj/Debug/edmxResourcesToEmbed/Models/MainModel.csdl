@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TvtoAutomationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TvtoAutomationEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="DocumentDeleteCommand">
+      <Parameter Name="Original_Id" Mode="In" Type="Int32" />
+      <Parameter Name="Original_Title" Mode="In" Type="String" />
+      <Parameter Name="Original_Create" Mode="In" Type="DateTime" />
+      <Parameter Name="Original_OwnerUsername" Mode="In" Type="String" />
+      <Parameter Name="Original_DocumentGroupId" Mode="In" Type="Int32" />
+      <Parameter Name="Original_IsDeleted" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="DocumentGroupDeleteCommand">
+      <Parameter Name="Original_Id" Mode="In" Type="Int32" />
+      <Parameter Name="Original_Name" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DocumentGroupInsertCommand" ReturnType="Collection(TvtoAutomationModel.DocumentGroupInsertCommand_Result)">
+      <Parameter Name="Name" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DocumentGroupSelectCommand" ReturnType="Collection(TvtoAutomationModel.DocumentGroupSelectCommand_Result)" />
+    <FunctionImport Name="DocumentGroupSignDeleteCommand">
+      <Parameter Name="Original_Id" Mode="In" Type="Int32" />
+      <Parameter Name="Original_DocumentGroupId" Mode="In" Type="Int32" />
+      <Parameter Name="Original_PositionId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DocumentGroupSignInsertCommand" ReturnType="Collection(TvtoAutomationModel.DocumentGroupSignInsertCommand_Result)">
+      <Parameter Name="DocumentGroupId" Mode="In" Type="Int32" />
+      <Parameter Name="PositionId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DocumentGroupSignSelectCommand" ReturnType="Collection(TvtoAutomationModel.DocumentGroupSignSelectCommand_Result)" />
+    <FunctionImport Name="DocumentGroupSignUpdateCommand" ReturnType="Collection(TvtoAutomationModel.DocumentGroupSignUpdateCommand_Result)">
+      <Parameter Name="DocumentGroupId" Mode="In" Type="Int32" />
+      <Parameter Name="PositionId" Mode="In" Type="Int32" />
+      <Parameter Name="Original_Id" Mode="In" Type="Int32" />
+      <Parameter Name="Original_DocumentGroupId" Mode="In" Type="Int32" />
+      <Parameter Name="Original_PositionId" Mode="In" Type="Int32" />
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DocumentGroupUpdateCommand" ReturnType="Collection(TvtoAutomationModel.DocumentGroupUpdateCommand_Result)">
+      <Parameter Name="Name" Mode="In" Type="Int32" />
+      <Parameter Name="Original_Id" Mode="In" Type="Int32" />
+      <Parameter Name="Original_Name" Mode="In" Type="Int32" />
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DocumentInsertCommand" ReturnType="Collection(TvtoAutomationModel.DocumentInsertCommand_Result)">
+      <Parameter Name="Title" Mode="In" Type="String" />
+      <Parameter Name="Create" Mode="In" Type="DateTime" />
+      <Parameter Name="OwnerUsername" Mode="In" Type="String" />
+      <Parameter Name="DocumentGroupId" Mode="In" Type="Int32" />
+      <Parameter Name="IsDeleted" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="DocumentSelectCommand" ReturnType="Collection(TvtoAutomationModel.DocumentSelectCommand_Result)" />
+    <FunctionImport Name="DocumentUpdateCommand" ReturnType="Collection(TvtoAutomationModel.DocumentUpdateCommand_Result)">
+      <Parameter Name="Title" Mode="In" Type="String" />
+      <Parameter Name="Create" Mode="In" Type="DateTime" />
+      <Parameter Name="OwnerUsername" Mode="In" Type="String" />
+      <Parameter Name="DocumentGroupId" Mode="In" Type="Int32" />
+      <Parameter Name="IsDeleted" Mode="In" Type="Boolean" />
+      <Parameter Name="Original_Id" Mode="In" Type="Int32" />
+      <Parameter Name="Original_Title" Mode="In" Type="String" />
+      <Parameter Name="Original_Create" Mode="In" Type="DateTime" />
+      <Parameter Name="Original_OwnerUsername" Mode="In" Type="String" />
+      <Parameter Name="Original_DocumentGroupId" Mode="In" Type="Int32" />
+      <Parameter Name="Original_IsDeleted" Mode="In" Type="Boolean" />
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DocumentVersionDeleteCommand">
+      <Parameter Name="Original_Id" Mode="In" Type="Int32" />
+      <Parameter Name="Original_DocumentId" Mode="In" Type="Int32" />
+      <Parameter Name="Original_Submit" Mode="In" Type="DateTime" />
+      <Parameter Name="Original_Username" Mode="In" Type="String" />
+      <Parameter Name="Original_IsDeleted" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="DocumentVersionInsertCommand" ReturnType="Collection(TvtoAutomationModel.DocumentVersionInsertCommand_Result)">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+      <Parameter Name="DocumentId" Mode="In" Type="Int32" />
+      <Parameter Name="Submit" Mode="In" Type="DateTime" />
+      <Parameter Name="Body" Mode="In" Type="String" />
+      <Parameter Name="Username" Mode="In" Type="String" />
+      <Parameter Name="IsDeleted" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="DocumentVersionSelectCommand" ReturnType="Collection(TvtoAutomationModel.DocumentVersionSelectCommand_Result)" />
+    <FunctionImport Name="DocumentVersionSignDeleteCommand">
+      <Parameter Name="Original_Id" Mode="In" Type="Int32" />
+      <Parameter Name="Original_DocumentVersionId" Mode="In" Type="Int32" />
+      <Parameter Name="Original_DocumentGroupSignId" Mode="In" Type="Int32" />
+      <Parameter Name="Original_Username" Mode="In" Type="String" />
+      <Parameter Name="Original_Status" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DocumentVersionSignInsertCommand" ReturnType="Collection(TvtoAutomationModel.DocumentVersionSignInsertCommand_Result)">
+      <Parameter Name="DocumentVersionId" Mode="In" Type="Int32" />
+      <Parameter Name="DocumentGroupSignId" Mode="In" Type="Int32" />
+      <Parameter Name="Username" Mode="In" Type="String" />
+      <Parameter Name="Status" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DocumentVersionSignSelectCommand" ReturnType="Collection(TvtoAutomationModel.DocumentVersionSignSelectCommand_Result)" />
+    <FunctionImport Name="DocumentVersionSignUpdateCommand" ReturnType="Collection(TvtoAutomationModel.DocumentVersionSignUpdateCommand_Result)">
+      <Parameter Name="DocumentVersionId" Mode="In" Type="Int32" />
+      <Parameter Name="DocumentGroupSignId" Mode="In" Type="Int32" />
+      <Parameter Name="Username" Mode="In" Type="String" />
+      <Parameter Name="Status" Mode="In" Type="String" />
+      <Parameter Name="Original_Id" Mode="In" Type="Int32" />
+      <Parameter Name="Original_DocumentVersionId" Mode="In" Type="Int32" />
+      <Parameter Name="Original_DocumentGroupSignId" Mode="In" Type="Int32" />
+      <Parameter Name="Original_Username" Mode="In" Type="String" />
+      <Parameter Name="Original_Status" Mode="In" Type="String" />
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DocumentVersionUpdateCommand" ReturnType="Collection(TvtoAutomationModel.DocumentVersionUpdateCommand_Result)">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+      <Parameter Name="DocumentId" Mode="In" Type="Int32" />
+      <Parameter Name="Submit" Mode="In" Type="DateTime" />
+      <Parameter Name="Body" Mode="In" Type="String" />
+      <Parameter Name="Username" Mode="In" Type="String" />
+      <Parameter Name="IsDeleted" Mode="In" Type="Boolean" />
+      <Parameter Name="Original_Id" Mode="In" Type="Int32" />
+      <Parameter Name="Original_DocumentId" Mode="In" Type="Int32" />
+      <Parameter Name="Original_Submit" Mode="In" Type="DateTime" />
+      <Parameter Name="Original_Username" Mode="In" Type="String" />
+      <Parameter Name="Original_IsDeleted" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="PositionDeleteCommand">
+      <Parameter Name="Original_Id" Mode="In" Type="Int32" />
+      <Parameter Name="Original_Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PositionInsertCommand" ReturnType="Collection(TvtoAutomationModel.PositionInsertCommand_Result)">
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PositionSelectCommand" ReturnType="Collection(TvtoAutomationModel.PositionSelectCommand_Result)" />
+    <FunctionImport Name="PositionUpdateCommand" ReturnType="Collection(TvtoAutomationModel.PositionUpdateCommand_Result)">
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Original_Id" Mode="In" Type="Int32" />
+      <Parameter Name="Original_Name" Mode="In" Type="String" />
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(TvtoAutomationModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(TvtoAutomationModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="UserDeleteCommand">
+      <Parameter Name="Original_Username" Mode="In" Type="String" />
+      <Parameter Name="Original_Password" Mode="In" Type="String" />
+      <Parameter Name="Original_PositionId" Mode="In" Type="Int32" />
+      <Parameter Name="Original_Firstname" Mode="In" Type="String" />
+      <Parameter Name="Original_Lastname" Mode="In" Type="String" />
+      <Parameter Name="Original_IsDeleted" Mode="In" Type="Boolean" />
+      <Parameter Name="Original_IsAdmin" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="UserInsertCommand">
+      <Parameter Name="Username" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+      <Parameter Name="ProfilePicture" Mode="In" Type="Binary" />
+      <Parameter Name="Firstname" Mode="In" Type="String" />
+      <Parameter Name="Lastname" Mode="In" Type="String" />
+      <Parameter Name="IsDeleted" Mode="In" Type="Boolean" />
+      <Parameter Name="IsAdmin" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="UserPositionDeleteCommand">
+      <Parameter Name="Original_Id" Mode="In" Type="Int32" />
+      <Parameter Name="Original_Username" Mode="In" Type="String" />
+      <Parameter Name="Original_PositionId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UserPositionInsertCommand" ReturnType="Collection(TvtoAutomationModel.UserPositionInsertCommand_Result)">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+      <Parameter Name="Username" Mode="In" Type="String" />
+      <Parameter Name="PositionId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UserPositionSelectCommand" ReturnType="Collection(TvtoAutomationModel.UserPositionSelectCommand_Result)" />
+    <FunctionImport Name="UserPositionUpdateCommand" ReturnType="Collection(TvtoAutomationModel.UserPositionUpdateCommand_Result)">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+      <Parameter Name="Username" Mode="In" Type="String" />
+      <Parameter Name="PositionId" Mode="In" Type="Int32" />
+      <Parameter Name="Original_Id" Mode="In" Type="Int32" />
+      <Parameter Name="Original_Username" Mode="In" Type="String" />
+      <Parameter Name="Original_PositionId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UserSelectCommand" ReturnType="Collection(TvtoAutomationModel.UserSelectCommand_Result)" />
+    <FunctionImport Name="UserUpdateCommand" ReturnType="Collection(TvtoAutomationModel.UserUpdateCommand_Result)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+      <Parameter Name="ProfilePicture" Mode="In" Type="Binary" />
+      <Parameter Name="Firstname" Mode="In" Type="String" />
+      <Parameter Name="Lastname" Mode="In" Type="String" />
+      <Parameter Name="IsDeleted" Mode="In" Type="Boolean" />
+      <Parameter Name="IsAdmin" Mode="In" Type="Boolean" />
+      <Parameter Name="Original_Username" Mode="In" Type="String" />
+      <Parameter Name="Original_Password" Mode="In" Type="String" />
+      <Parameter Name="Original_PositionId" Mode="In" Type="Int32" />
+      <Parameter Name="Original_Firstname" Mode="In" Type="String" />
+      <Parameter Name="Original_Lastname" Mode="In" Type="String" />
+      <Parameter Name="Original_IsDeleted" Mode="In" Type="Boolean" />
+      <Parameter Name="Original_IsAdmin" Mode="In" Type="Boolean" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="DocumentGroupInsertCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="Name" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DocumentGroupSelectCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="Name" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DocumentGroupSignInsertCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="DocumentGroupId" Nullable="false" />
+    <Property Type="Int32" Name="PositionId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DocumentGroupSignSelectCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="DocumentGroupId" Nullable="false" />
+    <Property Type="Int32" Name="PositionId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DocumentGroupSignUpdateCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="DocumentGroupId" Nullable="false" />
+    <Property Type="Int32" Name="PositionId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DocumentGroupUpdateCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="Name" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DocumentInsertCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="Create" Nullable="false" Precision="23" />
+    <Property Type="String" Name="OwnerUsername" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="DocumentGroupId" Nullable="false" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DocumentSelectCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="Create" Nullable="false" Precision="23" />
+    <Property Type="String" Name="OwnerUsername" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="DocumentGroupId" Nullable="false" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DocumentUpdateCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="Create" Nullable="false" Precision="23" />
+    <Property Type="String" Name="OwnerUsername" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="DocumentGroupId" Nullable="false" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DocumentVersionInsertCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="DocumentId" Nullable="false" />
+    <Property Type="DateTime" Name="Submit" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Body" Nullable="false" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DocumentVersionSelectCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="DocumentId" Nullable="false" />
+    <Property Type="DateTime" Name="Submit" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Body" Nullable="false" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DocumentVersionSignInsertCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="DocumentVersionId" Nullable="false" />
+    <Property Type="Int32" Name="DocumentGroupSignId" Nullable="false" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="DocumentVersionSignSelectCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="DocumentVersionId" Nullable="false" />
+    <Property Type="Int32" Name="DocumentGroupSignId" Nullable="false" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="DocumentVersionSignUpdateCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="DocumentVersionId" Nullable="false" />
+    <Property Type="Int32" Name="DocumentGroupSignId" Nullable="false" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="DocumentVersionUpdateCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="DocumentId" Nullable="false" />
+    <Property Type="DateTime" Name="Submit" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Body" Nullable="false" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="PositionInsertCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="PositionSelectCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="PositionUpdateCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="UserPositionInsertCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="PositionId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="UserPositionSelectCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="PositionId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="UserPositionUpdateCommand_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="PositionId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="UserSelectCommand_Result">
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="300" />
+    <Property Type="Binary" Name="ProfilePicture" Nullable="true" />
+    <Property Type="String" Name="Firstname" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Lastname" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+    <Property Type="Boolean" Name="IsAdmin" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="UserUpdateCommand_Result">
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="300" />
+    <Property Type="Binary" Name="ProfilePicture" Nullable="true" />
+    <Property Type="String" Name="Firstname" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Lastname" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+    <Property Type="Boolean" Name="IsAdmin" Nullable="false" />
+  </ComplexType>
+</Schema>

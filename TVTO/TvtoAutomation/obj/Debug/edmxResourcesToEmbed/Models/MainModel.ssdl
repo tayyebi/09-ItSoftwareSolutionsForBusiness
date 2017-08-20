@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TvtoAutomationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="DocumentDeleteCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Original_Id" Type="int" Mode="In" />
+    <Parameter Name="Original_Title" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_Create" Type="datetime" Mode="In" />
+    <Parameter Name="Original_OwnerUsername" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_DocumentGroupId" Type="int" Mode="In" />
+    <Parameter Name="Original_IsDeleted" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="DocumentGroupDeleteCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Original_Id" Type="int" Mode="In" />
+    <Parameter Name="Original_Name" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DocumentGroupInsertCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DocumentGroupSelectCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DocumentGroupSignDeleteCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Original_Id" Type="int" Mode="In" />
+    <Parameter Name="Original_DocumentGroupId" Type="int" Mode="In" />
+    <Parameter Name="Original_PositionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DocumentGroupSignInsertCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentGroupId" Type="int" Mode="In" />
+    <Parameter Name="PositionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DocumentGroupSignSelectCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DocumentGroupSignUpdateCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentGroupId" Type="int" Mode="In" />
+    <Parameter Name="PositionId" Type="int" Mode="In" />
+    <Parameter Name="Original_Id" Type="int" Mode="In" />
+    <Parameter Name="Original_DocumentGroupId" Type="int" Mode="In" />
+    <Parameter Name="Original_PositionId" Type="int" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DocumentGroupUpdateCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="int" Mode="In" />
+    <Parameter Name="Original_Id" Type="int" Mode="In" />
+    <Parameter Name="Original_Name" Type="int" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DocumentInsertCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Title" Type="nvarchar" Mode="In" />
+    <Parameter Name="Create" Type="datetime" Mode="In" />
+    <Parameter Name="OwnerUsername" Type="nvarchar" Mode="In" />
+    <Parameter Name="DocumentGroupId" Type="int" Mode="In" />
+    <Parameter Name="IsDeleted" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="DocumentSelectCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DocumentUpdateCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Title" Type="nvarchar" Mode="In" />
+    <Parameter Name="Create" Type="datetime" Mode="In" />
+    <Parameter Name="OwnerUsername" Type="nvarchar" Mode="In" />
+    <Parameter Name="DocumentGroupId" Type="int" Mode="In" />
+    <Parameter Name="IsDeleted" Type="bit" Mode="In" />
+    <Parameter Name="Original_Id" Type="int" Mode="In" />
+    <Parameter Name="Original_Title" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_Create" Type="datetime" Mode="In" />
+    <Parameter Name="Original_OwnerUsername" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_DocumentGroupId" Type="int" Mode="In" />
+    <Parameter Name="Original_IsDeleted" Type="bit" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DocumentVersionDeleteCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Original_Id" Type="int" Mode="In" />
+    <Parameter Name="Original_DocumentId" Type="int" Mode="In" />
+    <Parameter Name="Original_Submit" Type="datetime" Mode="In" />
+    <Parameter Name="Original_Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_IsDeleted" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="DocumentVersionInsertCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="DocumentId" Type="int" Mode="In" />
+    <Parameter Name="Submit" Type="datetime" Mode="In" />
+    <Parameter Name="Body" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsDeleted" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="DocumentVersionSelectCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DocumentVersionSignDeleteCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Original_Id" Type="int" Mode="In" />
+    <Parameter Name="Original_DocumentVersionId" Type="int" Mode="In" />
+    <Parameter Name="Original_DocumentGroupSignId" Type="int" Mode="In" />
+    <Parameter Name="Original_Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_Status" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="DocumentVersionSignInsertCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentVersionId" Type="int" Mode="In" />
+    <Parameter Name="DocumentGroupSignId" Type="int" Mode="In" />
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Status" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="DocumentVersionSignSelectCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DocumentVersionSignUpdateCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentVersionId" Type="int" Mode="In" />
+    <Parameter Name="DocumentGroupSignId" Type="int" Mode="In" />
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Status" Type="nchar" Mode="In" />
+    <Parameter Name="Original_Id" Type="int" Mode="In" />
+    <Parameter Name="Original_DocumentVersionId" Type="int" Mode="In" />
+    <Parameter Name="Original_DocumentGroupSignId" Type="int" Mode="In" />
+    <Parameter Name="Original_Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_Status" Type="nchar" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DocumentVersionUpdateCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="DocumentId" Type="int" Mode="In" />
+    <Parameter Name="Submit" Type="datetime" Mode="In" />
+    <Parameter Name="Body" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsDeleted" Type="bit" Mode="In" />
+    <Parameter Name="Original_Id" Type="int" Mode="In" />
+    <Parameter Name="Original_DocumentId" Type="int" Mode="In" />
+    <Parameter Name="Original_Submit" Type="datetime" Mode="In" />
+    <Parameter Name="Original_Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_IsDeleted" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="PositionDeleteCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Original_Id" Type="int" Mode="In" />
+    <Parameter Name="Original_Name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PositionInsertCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PositionSelectCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="PositionUpdateCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_Id" Type="int" Mode="In" />
+    <Parameter Name="Original_Name" Type="nvarchar" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="UserDeleteCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Original_Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_Password" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_PositionId" Type="int" Mode="In" />
+    <Parameter Name="Original_Firstname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_Lastname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_IsDeleted" Type="bit" Mode="In" />
+    <Parameter Name="Original_IsAdmin" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="UserInsertCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProfilePicture" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="Firstname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Lastname" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsDeleted" Type="bit" Mode="In" />
+    <Parameter Name="IsAdmin" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="UserPositionDeleteCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Original_Id" Type="int" Mode="In" />
+    <Parameter Name="Original_Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_PositionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UserPositionInsertCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="PositionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UserPositionSelectCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="UserPositionUpdateCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="PositionId" Type="int" Mode="In" />
+    <Parameter Name="Original_Id" Type="int" Mode="In" />
+    <Parameter Name="Original_Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_PositionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UserSelectCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="UserUpdateCommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProfilePicture" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="Firstname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Lastname" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsDeleted" Type="bit" Mode="In" />
+    <Parameter Name="IsAdmin" Type="bit" Mode="In" />
+    <Parameter Name="Original_Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_Password" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_PositionId" Type="int" Mode="In" />
+    <Parameter Name="Original_Firstname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_Lastname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Original_IsDeleted" Type="bit" Mode="In" />
+    <Parameter Name="Original_IsAdmin" Type="bit" Mode="In" />
+  </Function>
+  <EntityContainer Name="TvtoAutomationModelStoreContainer" />
+</Schema>

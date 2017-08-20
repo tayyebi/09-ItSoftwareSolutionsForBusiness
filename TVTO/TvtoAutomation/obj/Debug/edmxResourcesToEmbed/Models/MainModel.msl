@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TvtoAutomationModelStoreContainer" CdmEntityContainer="TvtoAutomationEntities">
+    <FunctionImportMapping FunctionImportName="DocumentDeleteCommand" FunctionName="TvtoAutomationModel.Store.DocumentDeleteCommand" />
+    <FunctionImportMapping FunctionImportName="DocumentGroupDeleteCommand" FunctionName="TvtoAutomationModel.Store.DocumentGroupDeleteCommand" />
+    <FunctionImportMapping FunctionImportName="DocumentGroupInsertCommand" FunctionName="TvtoAutomationModel.Store.DocumentGroupInsertCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.DocumentGroupInsertCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DocumentGroupSelectCommand" FunctionName="TvtoAutomationModel.Store.DocumentGroupSelectCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.DocumentGroupSelectCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DocumentGroupSignDeleteCommand" FunctionName="TvtoAutomationModel.Store.DocumentGroupSignDeleteCommand" />
+    <FunctionImportMapping FunctionImportName="DocumentGroupSignInsertCommand" FunctionName="TvtoAutomationModel.Store.DocumentGroupSignInsertCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.DocumentGroupSignInsertCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DocumentGroupId" ColumnName="DocumentGroupId" />
+          <ScalarProperty Name="PositionId" ColumnName="PositionId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DocumentGroupSignSelectCommand" FunctionName="TvtoAutomationModel.Store.DocumentGroupSignSelectCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.DocumentGroupSignSelectCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DocumentGroupId" ColumnName="DocumentGroupId" />
+          <ScalarProperty Name="PositionId" ColumnName="PositionId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DocumentGroupSignUpdateCommand" FunctionName="TvtoAutomationModel.Store.DocumentGroupSignUpdateCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.DocumentGroupSignUpdateCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DocumentGroupId" ColumnName="DocumentGroupId" />
+          <ScalarProperty Name="PositionId" ColumnName="PositionId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DocumentGroupUpdateCommand" FunctionName="TvtoAutomationModel.Store.DocumentGroupUpdateCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.DocumentGroupUpdateCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DocumentInsertCommand" FunctionName="TvtoAutomationModel.Store.DocumentInsertCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.DocumentInsertCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Create" ColumnName="Create" />
+          <ScalarProperty Name="OwnerUsername" ColumnName="OwnerUsername" />
+          <ScalarProperty Name="DocumentGroupId" ColumnName="DocumentGroupId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DocumentSelectCommand" FunctionName="TvtoAutomationModel.Store.DocumentSelectCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.DocumentSelectCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Create" ColumnName="Create" />
+          <ScalarProperty Name="OwnerUsername" ColumnName="OwnerUsername" />
+          <ScalarProperty Name="DocumentGroupId" ColumnName="DocumentGroupId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DocumentUpdateCommand" FunctionName="TvtoAutomationModel.Store.DocumentUpdateCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.DocumentUpdateCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Create" ColumnName="Create" />
+          <ScalarProperty Name="OwnerUsername" ColumnName="OwnerUsername" />
+          <ScalarProperty Name="DocumentGroupId" ColumnName="DocumentGroupId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DocumentVersionDeleteCommand" FunctionName="TvtoAutomationModel.Store.DocumentVersionDeleteCommand" />
+    <FunctionImportMapping FunctionImportName="DocumentVersionInsertCommand" FunctionName="TvtoAutomationModel.Store.DocumentVersionInsertCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.DocumentVersionInsertCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+          <ScalarProperty Name="Submit" ColumnName="Submit" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DocumentVersionSelectCommand" FunctionName="TvtoAutomationModel.Store.DocumentVersionSelectCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.DocumentVersionSelectCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+          <ScalarProperty Name="Submit" ColumnName="Submit" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DocumentVersionSignDeleteCommand" FunctionName="TvtoAutomationModel.Store.DocumentVersionSignDeleteCommand" />
+    <FunctionImportMapping FunctionImportName="DocumentVersionSignInsertCommand" FunctionName="TvtoAutomationModel.Store.DocumentVersionSignInsertCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.DocumentVersionSignInsertCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DocumentVersionId" ColumnName="DocumentVersionId" />
+          <ScalarProperty Name="DocumentGroupSignId" ColumnName="DocumentGroupSignId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DocumentVersionSignSelectCommand" FunctionName="TvtoAutomationModel.Store.DocumentVersionSignSelectCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.DocumentVersionSignSelectCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DocumentVersionId" ColumnName="DocumentVersionId" />
+          <ScalarProperty Name="DocumentGroupSignId" ColumnName="DocumentGroupSignId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DocumentVersionSignUpdateCommand" FunctionName="TvtoAutomationModel.Store.DocumentVersionSignUpdateCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.DocumentVersionSignUpdateCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DocumentVersionId" ColumnName="DocumentVersionId" />
+          <ScalarProperty Name="DocumentGroupSignId" ColumnName="DocumentGroupSignId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DocumentVersionUpdateCommand" FunctionName="TvtoAutomationModel.Store.DocumentVersionUpdateCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.DocumentVersionUpdateCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+          <ScalarProperty Name="Submit" ColumnName="Submit" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PositionDeleteCommand" FunctionName="TvtoAutomationModel.Store.PositionDeleteCommand" />
+    <FunctionImportMapping FunctionImportName="PositionInsertCommand" FunctionName="TvtoAutomationModel.Store.PositionInsertCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.PositionInsertCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PositionSelectCommand" FunctionName="TvtoAutomationModel.Store.PositionSelectCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.PositionSelectCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PositionUpdateCommand" FunctionName="TvtoAutomationModel.Store.PositionUpdateCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.PositionUpdateCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="TvtoAutomationModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="TvtoAutomationModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="TvtoAutomationModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="TvtoAutomationModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="TvtoAutomationModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="TvtoAutomationModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="TvtoAutomationModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="UserDeleteCommand" FunctionName="TvtoAutomationModel.Store.UserDeleteCommand" />
+    <FunctionImportMapping FunctionImportName="UserInsertCommand" FunctionName="TvtoAutomationModel.Store.UserInsertCommand" />
+    <FunctionImportMapping FunctionImportName="UserPositionDeleteCommand" FunctionName="TvtoAutomationModel.Store.UserPositionDeleteCommand" />
+    <FunctionImportMapping FunctionImportName="UserPositionInsertCommand" FunctionName="TvtoAutomationModel.Store.UserPositionInsertCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.UserPositionInsertCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="PositionId" ColumnName="PositionId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UserPositionSelectCommand" FunctionName="TvtoAutomationModel.Store.UserPositionSelectCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.UserPositionSelectCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="PositionId" ColumnName="PositionId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UserPositionUpdateCommand" FunctionName="TvtoAutomationModel.Store.UserPositionUpdateCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.UserPositionUpdateCommand_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="PositionId" ColumnName="PositionId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UserSelectCommand" FunctionName="TvtoAutomationModel.Store.UserSelectCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.UserSelectCommand_Result">
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ProfilePicture" ColumnName="ProfilePicture" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UserUpdateCommand" FunctionName="TvtoAutomationModel.Store.UserUpdateCommand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TvtoAutomationModel.UserUpdateCommand_Result">
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ProfilePicture" ColumnName="ProfilePicture" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
