@@ -1,0 +1,18 @@
+<html>
+  <body>
+
+    <script>
+      function getRandomInt() {
+        return Math.floor(Math.random() * (10000 - 5)) + 4;
+      }
+      for(var i=0; i<10; i++) {
+        imgUrl = "http://graph.facebook.com/v2.5/" + getRandomInt() + "/picture?height=200&height=200";
+        elem = document.createElement("img");
+        elem.setAttribute("src", imgUrl);
+        elem.setAttribute("width", 200);
+        elem.setAttribute("height", 200);
+        document.body.appendChild(elem);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+.menu 	{
+	font-family: Verdana, Georgia, Universal;
+	font-size: 8pt;
+	font-weight: bold;
+	color: white;
+	}
+.menu a {
+	font-family: Verdana, Georgia, Universal;
+	font-size: 8pt;
+	font-weight: bold;
+	color: white;
+	}
+.menu a:hover {
+	font-family: Verdana, Georgia, Universal;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #525294;
+	background: white;
+}
+
+.whitetext	{
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 8pt;
+	font-weight: normal;
+	color: white;
+	margin-left : 5px;
+}
+.whitetext	.normal{
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 10pt;
+	font-weight: normal;
+	color: white;
+	margin-left : 5px;
+}
+.whitetext	strong{
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 12pt;
+	font-weight: bold;
+	color: white;
+	}
+.whitetexttwo{
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 10pt;
+	font-weight: bold;
+	color: white;
+	}
+	
+		
+.normal	{
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 10pt;
+	font-weight: normal;
+	}
+	
+.normaltwo	{
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 10pt;
+	font-weight: normal;
+	margin-left : 15px;
+	margin-right : 15px;
+}
+		
+.normal B {
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 10pt;
+	font-weight: bold;
+	}
+.normal strong {
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 10pt;
+	font-weight: bold;
+	}
+
+.normalbold	{
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 10pt;
+	font-weight: bold;
+	}
+		
+.articletitle {
+	color: maroon;
+	font-weight: bold;
+	text-transform : capitalize;
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 11pt;
+	}	
+
+
+.larger	{
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 12pt;
+	font-weight: bold;
+	}
+.larger	B {
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 12pt;
+	font-weight: bold;
+	}
+.larger	strong{
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 12pt;
+	font-weight: bold;
+	}
+.largertwo {
+	font-family: verdana;
+	font-size: 12pt;
+	font-weight: bold;
+	background: maroon;
+	color: white;
+	padding : 5px 5px 5px 5px;
+	text-transform : capitalize;
+}
+.teeny	{
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 8pt;
+	font-weight: normal;
+	}
+.teeny2	{
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 8pt;
+	font-weight: normal;
+	}
+.teenythree	{
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 9pt;
+	font-weight: normal;
+	}
+.teeny B	{
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 8pt;
+	font-weight: bold;
+	}
+.teeny strong	{
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 8pt;
+	font-weight: bold;
+	}
+.teenytwo	{
+	font-family: "Bookman Old Style", "BernhardMod BT", "Times New Roman";
+	font-size: 9pt;
+	font-weight: normal;
+	margin-left : 20px;
+	margin-right : 20px;
+	background-color : "#E6F2FF";
+	border : thin solid Navy;
+	padding : 5px 5px 5px 5px;
+}	
+.teenytwo strong {
+	font-weight: bold;
+	font-size: 9pt;
+}	
+	
+a 	{
+	text-decoration: none;
+	font-weight: bold;
+	color: maroon;
+	}
+a link 	{
+	text-decoration: none;
+	font-weight: bold;
+	color: maroon;
+	}
+a visited {
+	text-decoration: none;
+	font-weight: bold;
+	color: maroon;
+	}
+a strong {
+	color: maroon;
+	font-size: 13pt;
+}
